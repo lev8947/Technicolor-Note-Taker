@@ -14,6 +14,19 @@ function getNotes(){
 router.get('/api/notes', (req, res) => {
 
     res.json(getNotes())
+
+});
+
+router.post('/api/notes', (req, res) => {
+
+    //create a new note
+    console.log(req.body); 
+    //read the request body for the note title and text
+    const title = req.body.title;
+    const text = req.body.text;
+    //generate an ID to the new note
+
+    //save the new note to the end of the existing note array
 })
 
 
