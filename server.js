@@ -17,7 +17,15 @@ app.get('/', (req, res) => {
 
     res.sendFile(indexHtmlPath)
 
-})
+});
+
+app.get('/notes', (req, res) => {
+
+    const notesHtmlPath = path.join(__dirname, 'public', 'notes.html');
+
+    res.sendFile(notesHtmlPath)
+
+});
 
 app.listen(PORT, function(){
     console.log(`App is running on http://localhost:${PORT}`);
